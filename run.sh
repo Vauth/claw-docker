@@ -6,7 +6,7 @@ if [ -z "$GITHUB_URL" ]; then
     exit 1
 fi
 
-# Remove cache
+# Remove cache directory
 rm -rf /root/app
 
 # Clone the repository
