@@ -1,14 +1,11 @@
 #!/bin/bash
 
-# Install apt packages
-apt update
-apt install git python3 python3-pip -y
-
 # Clone the repository
 git clone https://github.com/Vauth/test-project
 
 # Change directory to the cloned repository
-cd fastapi || exit
+cd test-project || exit
 
 # Install required Python packages
+chmod -R 777 claw.sh
 bash claw.sh
