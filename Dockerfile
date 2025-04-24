@@ -1,13 +1,11 @@
 FROM ubuntu:latest
 
-RUN apt-get update && \
-    apt-get install -y git && \
-    rm -rf /var/lib/apt/lists/*
+WORKDIR /app
 
-RUN git clone https://github.com/Vauth/test-project.git /app
+COPY run.sh .
 
 WORKDIR /app
 
-RUN chmod -R 777 claw.sh
+RUN chmod -R 777 run.sh
 
-CMD ["bash", "claw.sh"]
+CMD ["bash", "run.sh"]
