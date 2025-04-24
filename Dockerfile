@@ -1,6 +1,6 @@
-FROM catub/core:bullseye
-WORKDIR /userbot
-ENV TZ=Asia/Kolkata
-COPY . . 
-ENV PATH="/home/userbot/bin:$PATH"
-CMD ["python3","-m","userbot"]
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["python", "main.py"]
