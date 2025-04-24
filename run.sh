@@ -6,11 +6,14 @@ if [ -z "$GITHUB_URL" ]; then
     exit 1
 fi
 
+# Remove cache
+rm -rf /root/app
+
 # Clone the repository
-git clone "$GITHUB_URL" /app
+git clone "$GITHUB_URL" /root/app
 
 # Change directory to the cloned repository
-cd /app || exit
+cd /root/app || exit
 
 # Make claw.sh executable and run it
 chmod -R 777 claw.sh
