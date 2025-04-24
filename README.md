@@ -11,7 +11,8 @@ docker pull ghcr.io/vauth/test-docker:main
 
 ### 🚀 How it works?
 - Add `claw.sh` file in your project and fill it with required cmds.
-- Launch a project in run.claw.clouds & this docker image in your project.
+- Launch a project in run.claw.clouds & ads this docker image in your project.
+  - **Docker Image URL:** `ghcr.io/vauth/test-docker:main`
 - Import `GITHUB_URL` including your project URL into environment variables.
 
 <br>
